@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08070E">
+<title>Abhijeet Gautam — .NET Full Stack Developer</title>
+<meta name="description" content=".NET full stack developer building regulatory and financial systems for capital markets. C#, ASP.NET Core 8, Angular, Python. Kolkata, India.">
+
+<meta property="og:title" content="Abhijeet Gautam — .NET Full Stack Developer">
+<meta property="og:description" content="I build market-surveillance and treasury platforms that handle millions of trade records a day.">
+<meta property="og:image" content="abhijeet.jpg">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="abhijeet.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --void:#08070E;
+  --void2:#100D1C;
+  --glass:rgba(255,255,255,.045);
+  --glass2:rgba(255,255,255,.015);
+  --edge:rgba(255,255,255,.10);
+  --txt:#EAE8F6;
+  --soft:#C6C2DC;
+  --dim:#8D88AB;
+  --violet:#7B5CFF;
+  --pink:#FF5CA8;
+
+  --display:"Archivo Black",Impact,system-ui,sans-serif;
+  --body:"Space Grotesk",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+
+  --gut:clamp(1.15rem,4.5vw,4.5rem);
+  --maxw:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--void);color:var(--txt);
+  font-family:var(--body);font-size:16.5px;line-height:1.65;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--pink);outline-offset:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+/* ---------- ambient ---------- */
+.aura{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(58% 42% at 20% 6%,rgba(123,92,255,.32),transparent 70%),
+    radial-gradient(48% 38% at 90% 26%,rgba(255,92,168,.17),transparent 70%),
+    linear-gradient(180deg,var(--void) 0%,var(--void2) 42%,var(--void) 100%)}
+.floor{position:fixed;left:-25%;right:-25%;bottom:-8vh;height:58vh;z-index:0;pointer-events:none;
+  transform:perspective(340px) rotateX(70deg);transform-origin:bottom center;
+  background-image:
+    linear-gradient(to right,rgba(123,92,255,.28) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(123,92,255,.28) 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:linear-gradient(to top,rgba(0,0,0,.8),transparent 70%);
+  -webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.8),transparent 70%)}
+.page{position:relative;z-index:1}
+
+/* ---------- scroll progress ---------- */
+.prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:80;
+  background:linear-gradient(90deg,var(--violet),var(--pink));
+  box-shadow:0 0 14px rgba(255,92,168,.8)}
+
+/* ---------- nav ---------- */
+.bar{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);
+  background:linear-gradient(180deg,rgba(8,7,14,.85),rgba(8,7,14,.3));
+  border-bottom:1px solid var(--edge)}
+.bar-in{max-width:var(--maxw);margin:0 auto;padding:.62rem var(--gut);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.mark{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.75rem;color:var(--dim)}
+.mark img{width:27px;height:27px;border-radius:50%;object-fit:cover;
+  border:1px solid rgba(255,92,168,.45);flex:none}
+.mark b{color:var(--txt);font-weight:500}
+.navl{display:flex;gap:1.15rem;font-family:var(--mono);font-size:.75rem}
+.navl a{text-decoration:none;color:var(--dim);transition:color .2s ease}
+.navl a:hover{color:var(--txt)}
+@media(max-width:640px){.mark span{display:none}.navl a:nth-child(3){display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(2.4rem,7vh,5.5rem) 0 clamp(2.6rem,7vh,4.5rem)}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);
+  gap:clamp(1.8rem,5vw,4rem);align-items:center}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:2.2rem}}
+
+.pill{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);
+  font-size:.71rem;letter-spacing:.09em;text-transform:uppercase;color:#F3D9E8;
+  padding:.42rem .85rem;border-radius:999px;margin:0 0 1.6rem;
+  background:rgba(255,92,168,.10);border:1px solid rgba(255,92,168,.32)}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--pink);flex:none;
+  box-shadow:0 0 0 0 rgba(255,92,168,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,92,168,.65)}
+  70%{box-shadow:0 0 0 11px rgba(255,92,168,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,92,168,0)}}
+
+.stage{perspective:1100px;perspective-origin:50% 45%;margin:0 0 1.9rem}
+.stage-in{transform-style:preserve-3d;will-change:transform}
+.ex{display:block;position:relative;transform-style:preserve-3d;
+  font-family:var(--display);
+  font-size:clamp(2.7rem,11.5vw,7.6rem);
+  line-height:.87;letter-spacing:-.035em;text-transform:uppercase;margin:0}
+.ex .ly{position:absolute;inset:0;white-space:nowrap;user-select:none}
+.ex .face{position:relative;white-space:nowrap;
+  background:linear-gradient(178deg,#FFFFFF 4%,#D6DBF5 30%,#767FB4 49%,#F2F4FF 57%,#A7AFD8 78%,#5C6494 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-stroke:.5px rgba(255,255,255,.26)}
+
+.role-line{font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;color:var(--dim);
+  margin:0 0 1.3rem}
+.role-line b{color:var(--txt);font-weight:500}
+.sub{font-size:clamp(1rem,2vw,1.24rem);line-height:1.56;max-width:44ch;margin:0 0 2.1rem;color:var(--soft)}
+.sub strong{color:#fff;font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:.65rem}
+.btn{font-family:var(--mono);font-size:.78rem;text-decoration:none;padding:.78rem 1.25rem;
+  border-radius:11px;display:inline-block;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.btn-hot{background:linear-gradient(135deg,var(--violet),var(--pink));color:#fff;font-weight:500;
+  box-shadow:0 10px 30px -12px rgba(123,92,255,.95)}
+.btn-hot:hover{transform:translateY(-3px);box-shadow:0 18px 42px -12px rgba(255,92,168,.95)}
+.btn-line{border:1px solid var(--edge);background:var(--glass);color:var(--txt)}
+.btn-line:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.32)}
+
+/* ---------- portrait ---------- */
+.portrait{perspective:1000px;animation:bob 7s ease-in-out infinite;justify-self:center}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+.pf{position:relative;width:min(100%,320px);aspect-ratio:1;border-radius:24px;
+  overflow:hidden;transform-style:preserve-3d;will-change:transform;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 32px 70px -26px rgba(123,92,255,.85), 0 0 0 1px rgba(255,92,168,.12)}
+.pf img{width:100%;height:100%;object-fit:cover;
+  filter:contrast(1.07) saturate(1.04) brightness(.98)}
+.pf-vig{position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(115% 100% at 50% 32%,transparent 38%,rgba(8,7,14,.72) 100%),
+    linear-gradient(200deg,rgba(123,92,255,.20),transparent 48%,rgba(255,92,168,.16))}
+.pf-edge{position:absolute;inset:0;pointer-events:none;border-radius:24px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.pf-cap{font-family:var(--mono);font-size:.7rem;color:var(--dim);text-align:center;
+  margin-top:1rem;letter-spacing:.05em}
+@media(max-width:900px){
+  .portrait{justify-self:start;animation:none}
+  .pf{width:min(58vw,220px);border-radius:20px}
+  .pf-edge{border-radius:20px}
+  .pf-cap{text-align:left}
+}
+
+/* ---------- sections ---------- */
+.band{padding:clamp(3rem,7.5vh,5.2rem) 0}
+.lab{font-family:var(--mono);font-size:.71rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--dim);margin:0 0 2.1rem;display:flex;align-items:center;gap:.85rem}
+.lab::after{content:"";height:1px;flex:1;background:linear-gradient(to right,var(--edge),transparent)}
+
+/* ---------- glass card system ---------- */
+.deck{perspective:1500px}
+.card{position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--glass),var(--glass2));
+  backdrop-filter:blur(8px);
+  border:1px solid var(--edge);border-radius:17px;transform-style:preserve-3d;
+  transition:transform .38s cubic-bezier(.2,.7,.3,1),border-color .38s ease,box-shadow .38s ease}
+.card::after{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.10),transparent);
+  transition:left .65s ease;pointer-events:none}
+.card:hover{transform:translateY(-7px) rotateX(4deg) rotateY(-5deg);
+  border-color:rgba(255,92,168,.40);box-shadow:-14px 20px 48px -18px rgba(123,92,255,.6)}
+.card:hover::after{left:110%}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+.stat{padding:1.45rem 1.25rem}
+.stat .n{font-family:var(--display);font-size:clamp(1.9rem,4.6vw,2.8rem);line-height:1;letter-spacing:-.03em;
+  background:linear-gradient(160deg,#fff,#B9BEE8 55%,#7B5CFF);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .t{font-family:var(--mono);font-size:.72rem;color:var(--dim);margin-top:.65rem;line-height:1.55}
+
+/* work */
+.work-grid{display:grid;gap:1.15rem}
+.proj{padding:clamp(1.45rem,3.4vw,2.2rem)}
+.proj h3{font-family:var(--display);font-size:clamp(1.3rem,3.4vw,2rem);line-height:1.1;
+  letter-spacing:-.02em;margin:0 0 .35rem;text-transform:uppercase}
+.proj .org{font-family:var(--mono);font-size:.73rem;color:var(--pink);margin:0 0 1.05rem}
+.proj p{margin:0 0 1.25rem;max-width:66ch;color:var(--soft)}
+.impact{list-style:none;margin:0 0 1.35rem;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem 1.2rem}
+.impact li{font-family:var(--mono);font-size:.73rem;color:var(--dim);line-height:1.5;
+  padding-left:.8rem;border-left:2px solid rgba(123,92,255,.55)}
+.impact b{display:block;color:#fff;font-weight:500;font-size:.86rem;letter-spacing:-.01em}
+.chips{display:flex;flex-wrap:wrap;gap:.42rem}
+.chip{font-family:var(--mono);font-size:.69rem;padding:.3rem .6rem;border-radius:6px;
+  background:rgba(123,92,255,.12);border:1px solid rgba(123,92,255,.28);color:#C6BFF5}
+
+/* experience */
+.role{display:grid;grid-template-columns:225px 1fr;gap:clamp(1rem,4vw,3rem)}
+.role-meta{font-family:var(--mono);font-size:.76rem;color:var(--dim);line-height:1.8}
+.role-meta b{display:block;color:var(--txt);font-weight:500;font-size:.85rem;margin-bottom:.3rem}
+.role ul{list-style:none;margin:0;padding:0;display:grid;gap:1.1rem}
+.role li{position:relative;padding-left:1.55rem;color:var(--soft);max-width:70ch}
+.role li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:2px;
+  background:linear-gradient(135deg,var(--violet),var(--pink));
+  box-shadow:0 0 12px rgba(123,92,255,.85);transform:rotate(45deg)}
+.role li b{color:#fff;font-weight:700}
+@media(max-width:760px){.role{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1rem}
+.sk{padding:1.35rem}
+.sk h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--pink);margin:0 0 .85rem}
+.sk ul{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.78rem;
+  line-height:1.9;color:#BFBBD6}
+
+/* contact */
+.mail{font-family:var(--display);font-size:clamp(1.25rem,5vw,3.2rem);line-height:1.12;letter-spacing:-.03em;
+  text-decoration:none;display:inline-block;word-break:break-word;
+  background:linear-gradient(178deg,#fff 10%,#CBD1F2 45%,#7F88BC 55%,#EFF1FF 75%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;transition:filter .3s ease}
+.mail:hover{filter:drop-shadow(0 6px 26px rgba(255,92,168,.85))}
+.reach{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:1.8rem;font-family:var(--mono);font-size:.8rem}
+.reach a{color:var(--dim);text-decoration:none;transition:color .2s ease}
+.reach a:hover{color:var(--txt)}
+.foot{font-family:var(--mono);font-size:.69rem;color:#6E6989;margin-top:3.2rem;
+  padding:1.05rem 0 2.4rem;border-top:1px solid var(--edge);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:640px){ .floor{display:none} }
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .card,.card::after,.btn,.portrait,.pulse{animation:none;transition:none}
+  .card:hover{transform:none}
+  .floor{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="aura"></div>
+<div class="floor"></div>
+<div class="prog" id="prog"></div>
+
+<div class="page">
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="mark">
+      <img src="abhijeet.jpg" alt="" width="27" height="27">
+      <b>Abhijeet Gautam</b><span>&nbsp;/ .NET full stack</span>
+    </div>
+    <nav class="navl" aria-label="Sections">
+      <a href="#work">work</a>
+      <a href="#exp">experience</a>
+      <a href="#skills">stack</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hgrid">
+
+      <div>
+        <p class="pill"><span class="pulse"></span>Open to senior .NET &amp; full stack roles</p>
+
+        <div class="stage" id="stage">
+          <div class="stage-in" id="stageIn">
+            <span class="ex" data-text="ABHIJEET"></span>
+            <span class="ex" data-text="GAUTAM"></span>
+          </div>
+        </div>
+
+        <p class="role-line"><b>Senior Associate Programmer</b> · ICRA Analytics · Kolkata, India</p>
+
+        <p class="sub">
+          I build regulatory and financial platforms that move millions of trade records a day —
+          and I spend most of my time on the part everyone skips: <strong>making them fast enough to trust</strong>.
+        </p>
+
+        <div class="cta">
+          <a class="btn btn-hot" href="mailto:gautamabhijeet7@gmail.com">Get in touch</a>
+          <a class="btn btn-line" href="Abhijeet_Gautam_Resume.pdf">Résumé (PDF)</a>
+          <a class="btn btn-line" href="https://linkedin.com/in/abhijeet-gautam-a49782195">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="portrait">
+        <div class="pf" id="pf">
+          <img src="abhijeet.jpg" alt="Abhijeet Gautam" width="400" height="400" loading="eager" decoding="async">
+          <span class="pf-vig"></span>
+          <span class="pf-edge"></span>
+        </div>
+        <p class="pf-cap">C# · .NET 8 · Angular · Python · SQL</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap deck">
+    <div class="stats">
+      <div class="card stat rv"><div class="n">98%</div><div class="t">faster batch job — 2 hours down to 2 minutes</div></div>
+      <div class="card stat rv"><div class="n">4</div><div class="t">database engines, one codebase, switched at runtime</div></div>
+      <div class="card stat rv"><div class="n">34</div><div class="t">Angular standalone components shipped end to end</div></div>
+      <div class="card stat rv"><div class="n">3+</div><div class="t">years on production capital-markets systems</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="work">
+  <div class="wrap deck">
+    <h2 class="lab">Selected work</h2>
+    <div class="work-grid">
+
+      <article class="card proj rv">
+        <h3>POMA &amp; Portfolio Overlap</h3>
+        <p class="org">ICRA Analytics · market surveillance &amp; portfolio analytics</p>
+        <p>
+          A platform that detects market-abuse patterns across high-volume tick and trade data and
+          measures holdings overlap between portfolios. Two separately licensed products ship from a
+          single repository through compile-time module switching, so there is one codebase to
+          maintain instead of two forks drifting apart.
+        </p>
+        <ul class="impact">
+          <li><b>2 hrs → 2 min</b>batch pipeline, re-architected for parallelism</li>
+          <li><b>4 engines</b>SQL Server, Oracle, PostgreSQL, MySQL — no fork</li>
+          <li><b>Millions/day</b>trade records ingested via native bulk copy</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">ASP.NET Core 8</span><span class="chip">C#</span><span class="chip">Angular</span>
+          <span class="chip">Python · Polars</span><span class="chip">SignalR</span><span class="chip">Parquet</span>
+          <span class="chip">SQL Server</span><span class="chip">Oracle</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
+        </div>
+      </article>
+
+      <article class="card proj rv">
+        <h3>Treasury Solutions &amp; MFI Explorer</h3>
+        <p class="org">ICRA Analytics · legacy modernisation</p>
+        <p>
+          Moved legacy treasury desktop tools onto the web behind RESTful Web APIs and Angular
+          reporting modules. Report response times came down through SQL Server indexing and
+          stored-procedure rewrites rather than by adding hardware.
+        </p>
+        <ul class="impact">
+          <li><b>Desktop → web</b>legacy tools rebuilt as API-backed platforms</li>
+          <li><b>Faster reports</b>via indexing and stored-procedure tuning</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">ASP.NET Core</span><span class="chip">ASP.NET MVC</span><span class="chip">Web API</span>
+          <span class="chip">Angular</span><span class="chip">T-SQL</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band" id="exp">
+  <div class="wrap">
+    <h2 class="lab">Experience</h2>
+    <div class="role rv">
+      <div class="role-meta">
+        <b>Senior Associate Programmer</b>
+        ICRA Analytics Ltd.<br>
+        Kolkata, India<br>
+        Sep 2023 — Present
+      </div>
+      <ul>
+        <li>
+          Cut a business-critical batch job from <b>2 hours to 2 minutes</b> by re-architecting sequential
+          workflows into multithreaded parallel pipelines in .NET 8, and offloading heavy data
+          transformations to an in-process Python (Polars) analytics engine.
+        </li>
+        <li>
+          Built a <b>runtime-switchable data access layer</b> across SQL Server, Oracle, PostgreSQL and MySQL
+          so the product deploys on any client's database standard without forking. Raised ingestion
+          throughput for millions of daily trade records using engine-native bulk-copy paths with
+          Parquet staging.
+        </li>
+        <li>
+          Closed out <b>VAPT audit findings</b> and moved enterprise clients onto centralised identity —
+          JWT middleware, email OTP multi-factor login, per-IP rate limiting, hardened security headers,
+          and SAML 2.0 SSO with Microsoft Entra ID.
+        </li>
+        <li>
+          Delivered full stack features across <b>34 Angular standalone components</b> and ASP.NET Core Web
+          APIs, including real-time upload progress over SignalR that removed manual page refreshes on
+          long-running imports.
+        </li>
+        <li>
+          Replaced manual releases with <b>GitHub Actions CI/CD</b> publishing the .NET API, the Angular app,
+          and Cython-compiled Python modules to IIS and a Windows service.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="skills">
+  <div class="wrap deck">
+    <h2 class="lab">Stack</h2>
+    <div class="skills">
+      <div class="card sk rv"><h4>Backend</h4><ul>
+        <li>C# · .NET 8</li><li>ASP.NET Core / MVC</li><li>RESTful Web APIs</li>
+        <li>EF Core · Dapper · LINQ</li><li>SignalR</li><li>Worker services</li></ul></div>
+      <div class="card sk rv"><h4>Frontend</h4><ul>
+        <li>Angular v22</li><li>TypeScript · RxJS</li><li>Angular Material</li>
+        <li>Bootstrap 5</li><li>HTML5 · CSS3</li></ul></div>
+      <div class="card sk rv"><h4>Data</h4><ul>
+        <li>SQL Server · Oracle</li><li>PostgreSQL · MySQL</li><li>T-SQL · stored procs</li>
+        <li>Query optimisation</li><li>Apache Parquet</li></ul></div>
+      <div class="card sk rv"><h4>Performance</h4><ul>
+        <li>Multithreading · TPL</li><li>async / await</li><li>Python · Polars</li>
+        <li>Redis · in-memory cache</li></ul></div>
+      <div class="card sk rv"><h4>Security</h4><ul>
+        <li>JWT · RBAC</li><li>SAML 2.0 SSO</li><li>Microsoft Entra ID</li>
+        <li>OTP multi-factor</li><li>OWASP Top 10 · VAPT</li></ul></div>
+      <div class="card sk rv"><h4>Architecture &amp; DevOps</h4><ul>
+        <li>System design HLD/LLD</li><li>SOLID · design patterns</li><li>xUnit · Moq</li>
+        <li>GitHub Actions CI/CD</li><li>Git · IIS · Agile</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap deck">
+    <h2 class="lab">Education</h2>
+    <div class="stats">
+      <div class="card stat rv">
+        <div class="t" style="margin-top:0;color:var(--txt);font-size:.87rem;line-height:1.6">
+          <b>B.Tech, Information Technology</b><br>
+          B. P. Poddar Institute of Management &amp; Technology, Kolkata
+        </div>
+        <div class="t">2019 — 2023 &nbsp;·&nbsp; CGPA 8.9 / 10</div>
+      </div>
+      <div class="card stat rv">
+        <div class="t" style="margin-top:0;color:var(--txt);font-size:.87rem;line-height:1.6">
+          <b>Generative AI Mastery for Software Development</b><br>
+          upGrad &amp; Microsoft
+        </div>
+        <div class="t">November 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap">
+    <h2 class="lab">Get in touch</h2>
+    <a class="mail" href="mailto:gautamabhijeet7@gmail.com">gautamabhijeet7@gmail.com</a>
+    <div class="reach">
+      <a href="tel:+918094620049">+91 80946 20049</a>
+      <a href="https://linkedin.com/in/abhijeet-gautam-a49782195">LinkedIn</a>
+      <a href="Abhijeet_Gautam_Resume.pdf">Résumé</a>
+    </div>
+    <div class="foot">
+      <span>© 2026 Abhijeet Gautam</span>
+      <span>Hand-built. No frameworks, no dependencies.</span>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- build extruded 3D type ---- */
+  var LAYERS = 16;
+  function lerp(a,b,t){return Math.round(a+(b-a)*t)}
+  function depth(t){return 'rgb('+lerp(20,86,t)+','+lerp(16,62,t)+','+lerp(34,196,t)+')'}
+
+  document.querySelectorAll('.ex').forEach(function(el){
+    var text = el.dataset.text, frag = document.createDocumentFragment();
+    for(var i=LAYERS;i>=1;i--){
+      var s = document.createElement('span');
+      s.className='ly'; s.setAttribute('aria-hidden','true'); s.textContent=text;
+      s.style.color = depth(i/LAYERS);
+      s.style.transform = 'translate3d(0,0,'+(-i*3)+'px)';
+      if(i===LAYERS) s.style.textShadow='0 0 40px rgba(123,92,255,.85)';
+      frag.appendChild(s);
+    }
+    var face=document.createElement('span'); face.className='face'; face.textContent=text;
+    frag.appendChild(face); el.appendChild(frag);
+  });
+
+  /* ---- pointer parallax: type and portrait counter-rotate ---- */
+  if(!reduce){
+    var stage=document.getElementById('stage'),
+        inner=document.getElementById('stageIn'),
+        pf=document.getElementById('pf');
+    var tx=0,ty=0,cx=0,cy=0,raf=null,idleT0=performance.now();
+
+    function paint(){
+      inner.style.transform='rotateX('+cy.toFixed(2)+'deg) rotateY('+cx.toFixed(2)+'deg)';
+      if(pf) pf.style.transform='translateZ(45px) rotateX('+(-cy*0.65).toFixed(2)+'deg) rotateY('+(-cx*0.65).toFixed(2)+'deg)';
+    }
+    function loop(){
+      cx+=(tx-cx)*0.08; cy+=(ty-cy)*0.08; paint();
+      if(Math.abs(tx-cx)>0.01||Math.abs(ty-cy)>0.01){raf=requestAnimationFrame(loop);}
+      else{raf=null;}
+    }
+    function kick(){ if(!raf) raf=requestAnimationFrame(loop); }
+
+    window.addEventListener('pointermove',function(e){
+      var r=stage.getBoundingClientRect();
+      tx=((e.clientX/window.innerWidth)-.5)*20;
+      ty=-((e.clientY-r.top)/Math.max(r.height,1)-.5)*12;
+      ty=Math.max(-12,Math.min(12,ty));
+      kick();
+    },{passive:true});
+    window.addEventListener('pointerleave',function(){tx=0;ty=0;kick();});
+
+    /* idle drift so it reads as dimensional before you touch it */
+    (function idle(now){
+      if(raf===null){
+        var e=(now-idleT0)/1000;
+        cx=Math.sin(e*0.5)*5; cy=Math.sin(e*0.36)*2.4; paint();
+      }
+      requestAnimationFrame(idle);
+    })(idleT0);
+  }
+
+  /* ---- scroll progress ---- */
+  var prog=document.getElementById('prog'), ticking=false;
+  function bar(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){ ticking=true; requestAnimationFrame(bar); }
+  },{passive:true});
+  bar();
+
+  /* ---- scroll reveal ---- */
+  var items=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(n){n.classList.add('in')});
+  } else {
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if(e.isIntersecting){
+          var i=e.target.parentElement?Array.prototype.indexOf.call(e.target.parentElement.children,e.target):0;
+          e.target.style.transitionDelay=Math.min(i,6)*70+'ms';
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(n){io.observe(n)});
+  }
+})();
+</script>
+</body>
+</html>

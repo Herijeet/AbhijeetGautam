@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <title>Abhijeet Gautam · Software Engineer, .NET Full Stack</title>
 <meta name="description" content="Abhijeet Gautam is a software engineer in Kolkata building capital-markets and mutual fund software in C#, ASP.NET Core 8 and Angular: microservices, market surveillance and self-service Excel reporting.">
@@ -19,7 +19,10 @@
 
 <link rel="icon" href="abhijeet.jpg">
 <link rel="apple-touch-icon" href="abhijeet.jpg">
-<link rel="stylesheet" href="styles.css?v=20261108">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261113">
 <script>document.documentElement.classList.add('js')</script>
 
 <script type="application/ld+json">
@@ -38,7 +41,7 @@
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="Abhijeet Gautam, back to top">Abhijeet Gautam</a>
+    <a class="brand" href="#top" aria-label="Abhijeet Gautam, back to top">AG<span>.</span></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="navLinks">
         <li><a href="#overview">Overview</a></li>
@@ -46,9 +49,10 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="only-menu"><a href="Abhijeet_Gautam_Resume.pdf" download>Résumé (PDF)</a></li>
       </ul>
     </nav>
-    <a class="nav-cta" href="Abhijeet_Gautam_Resume.pdf" download>Résumé</a>
+    <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span></button>
   </div>
 </header>
@@ -59,31 +63,31 @@
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="hero-kicker rv">Software Engineer · .NET Full Stack</p>
-      <h1 class="hero-title rv"><span class="dim">Fast, dependable software for</span> capital markets.</h1>
+      <p class="hero-kicker rv">Engineering with intention</p>
+      <h1 class="hero-name rv">Abhijeet<br>Gautam<span class="pt">.</span></h1>
+      <p class="hero-role rv">Software Engineer / .NET Full Stack Developer</p>
       <p class="hero-sub rv">
-        I'm Abhijeet. For three years I've built the systems analysts at ICRA Analytics rely on:
-        market surveillance, fund analytics, and a reporting tool that lets people make their own Excel reports.
+        I build reliable capital-markets and mutual fund software with C#, ASP.NET Core 8 and Angular:
+        market surveillance, fund analytics, and a tool that lets analysts build their own Excel reports.
       </p>
+      <p class="hero-meta rv"><span>ICRA Analytics · Kolkata, India</span><i aria-hidden="true"></i><span>3+ years of experience</span></p>
       <div class="hero-actions rv">
-        <a class="btn" href="mailto:gautamabhijeet7@gmail.com">Get in touch</a>
-        <a class="link" href="Abhijeet_Gautam_Resume.pdf" download>Download résumé <span aria-hidden="true">›</span></a>
+        <a class="btn" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        <a class="btn ghost" href="#work">View selected work <span aria-hidden="true">↓</span></a>
       </div>
-      <ul class="hero-facts rv" aria-label="At a glance">
-        <li><b>3+ yrs</b><span>Production experience</span></li>
-        <li><b>ICRA</b><span>Analytics Ltd.</span></li>
-        <li><b>Kolkata</b><span>India · IST</span></li>
-      </ul>
+      <a class="link hero-cv rv" href="Abhijeet_Gautam_Resume.pdf" download>Download résumé (PDF) <span aria-hidden="true">›</span></a>
     </div>
 
-    <div class="hero-media rv" id="tiltWrap">
-      <div class="tilt" id="tilt">
-        <img src="abhijeet.jpg" alt="Portrait of Abhijeet Gautam" width="400" height="500" fetchpriority="high">
-        <span class="sheen" aria-hidden="true"></span>
+    <figure class="hero-media rv" id="tiltWrap">
+      <div class="frame">
+        <p class="frame-k">01 / Profile</p>
+        <div class="tilt" id="tilt">
+          <img src="abhijeet.jpg" alt="Portrait of Abhijeet Gautam" width="400" height="500" fetchpriority="high">
+          <span class="sheen" aria-hidden="true"></span>
+        </div>
+        <figcaption class="frame-cap"><span>Open to new roles</span><span>.NET · Angular · SQL</span></figcaption>
       </div>
-      <div class="float f1" aria-hidden="true"><b>98%</b> faster batch job</div>
-      <div class="float f2" aria-hidden="true"><span class="dot"></span>Open to new roles</div>
-    </div>
+    </figure>
   </div>
 </section>
 
@@ -91,7 +95,7 @@
 <section class="show" id="overview" aria-labelledby="show-h">
   <div class="show-pin">
     <div class="show-head">
-      <p class="eyebrow light">Featured build</p>
+      <p class="eyebrow light">02 / Featured build</p>
       <h2 id="show-h" class="show-title">Reports, made by the people<br class="br-wide"> who read them.</h2>
       <p class="show-cap">Scroll to open. The screen mirrors the live demo below.</p>
     </div>
@@ -120,7 +124,7 @@
   <div class="wrap">
     <div class="split">
       <div class="split-txt">
-        <p class="eyebrow rv">Custom Report Builder</p>
+        <p class="eyebrow rv">03 / Custom Report Builder</p>
         <h2 id="rb-h" class="h2 rv">One tool instead of a ticket for every report.</h2>
         <p class="body rv">
           Every analyst wanted a slightly different mutual fund report, and each one used to be a developer ticket.
@@ -166,7 +170,7 @@
 <!-- ============ HIGHLIGHTS ============ -->
 <section class="sec tint" aria-labelledby="hl-h">
   <div class="wrap">
-    <p class="eyebrow rv">Highlights</p>
+    <p class="eyebrow rv">04 / Highlights</p>
     <h2 id="hl-h" class="h2 rv">Numbers from production, not side projects.</h2>
     <div class="nums">
       <div class="num card rv"><p class="big"><span data-count="98">98</span>%</p><p>faster: a business-critical batch job went from <b>2 hours to 2 minutes</b>.</p></div>
@@ -180,7 +184,7 @@
 <!-- ============ WORK ============ -->
 <section class="sec" id="work" aria-labelledby="work-h">
   <div class="wrap">
-    <p class="eyebrow rv">Selected work</p>
+    <p class="eyebrow rv">05 / Selected work</p>
     <h2 id="work-h" class="h2 rv">Large data. Demanding users. No room for slow.</h2>
 
     <div class="tiles">
@@ -314,7 +318,7 @@
 <section class="sec tint" aria-labelledby="about-h">
   <div class="wrap about">
     <div>
-      <p class="eyebrow rv">About</p>
+      <p class="eyebrow rv">06 / About</p>
       <h2 id="about-h" class="h2 rv">I like the unglamorous part: making it fast and keeping it working.</h2>
     </div>
     <div class="about-txt">
@@ -335,7 +339,7 @@
 <!-- ============ EXPERIENCE ============ -->
 <section class="sec" id="experience" aria-labelledby="exp-h">
   <div class="wrap">
-    <p class="eyebrow rv">Experience</p>
+    <p class="eyebrow rv">07 / Experience</p>
     <h2 id="exp-h" class="h2 rv">Where the work happened.</h2>
 
     <div class="job card rv">
@@ -376,7 +380,7 @@
 <!-- ============ SKILLS (tech specs) ============ -->
 <section class="sec tint" id="skills" aria-labelledby="sk-h">
   <div class="wrap">
-    <p class="eyebrow rv">Skills</p>
+    <p class="eyebrow rv">08 / Skills</p>
     <h2 id="sk-h" class="h2 rv">Tech specs.</h2>
     <dl class="specs">
       <div class="rv"><dt>Languages</dt><dd>C#, Python, SQL, TypeScript, JavaScript</dd></div>
@@ -394,7 +398,8 @@
 <section class="contact" id="contact" aria-labelledby="ct-h">
   <div class="wrap">
     <img class="ct-face rv" src="abhijeet.jpg" alt="" width="88" height="88" loading="lazy">
-    <h2 id="ct-h" class="ct-title rv">Have a hard .NET problem?<br>Let's talk.</h2>
+    <p class="eyebrow rv">09 / Contact</p>
+    <h2 id="ct-h" class="ct-title rv">Have a hard .NET problem? <em>Let's talk.</em></h2>
     <p class="body rv">I'm open to .NET and full stack roles. Email is the fastest way to reach me.</p>
     <div class="ct-actions rv">
       <a class="btn lg" href="mailto:gautamabhijeet7@gmail.com">Email me</a>
@@ -418,6 +423,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=20261108" defer></script>
+<script src="main.js?v=20261113" defer></script>
 </body>
 </html>

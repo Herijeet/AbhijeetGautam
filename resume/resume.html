@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Abhijeet Gautam - Software Engineer</title>
+<meta name="author" content="Abhijeet Gautam">
+<meta name="description" content="Résumé of Abhijeet Gautam, Software Engineer (.NET, Python, Angular), Kolkata, India.">
+<!--
+  Single source for both résumé PDFs. Build with resume/build-resume.js.
+  The phone number is never stored here: the build script fills the
+  #phone slot only for the recruiter copy and removes it otherwise.
+  ATS rules: one column, no tables, icons, images or colour blocks.
+-->
+<style>
+  @page{size:A4;margin:8mm 12mm}
+  *{box-sizing:border-box}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{margin:0;font-family:Calibri,Carlito,Arial,"Liberation Sans",sans-serif;font-size:10pt;line-height:1.2;color:#000}
+  h1{font-size:18pt;margin:0;line-height:1.1;font-weight:700}
+  .role{font-size:11.5pt;margin:1pt 0 2pt;font-weight:700}
+  .contact{margin:0;font-size:10pt}
+  h2{font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin:6pt 0 2.5pt;padding-bottom:1.5pt;border-bottom:.75pt solid #000}
+  p{margin:0}
+  ul{margin:1pt 0 0;padding-left:13pt}
+  li{margin:0 0 .8pt}
+  .skills p{margin:0 0 .8pt}
+  .job,.proj{margin:0;font-weight:700}
+  .sub{margin:0 0 1pt}
+  .proj{margin-top:2pt}
+  .proj span{font-weight:400}
+  a{color:#000;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Abhijeet Gautam</h1>
+  <p class="role">Software Engineer | .NET, Python, Angular</p>
+  <p class="contact">Kolkata, India | gautamabhijeet7@gmail.com<span id="phone-sep"> | </span><span id="phone"></span></p>
+  <p class="contact">linkedin.com/in/abhijeet-gautam-a49782195 | github.com/Herijeet | herijeet.github.io/AbhijeetGautam</p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p>Software engineer with 3+ years building data-heavy financial software for asset-management and capital-markets clients. Works across C#/.NET, Python and Angular: report engines, market surveillance and the data pipelines under them. Record of on-time, high-quality delivery, architecture modernisation and measurable performance gains, including a critical batch job cut from 2 hours to 2 minutes.</p>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <p><b>Languages:</b> C#, Python, TypeScript, SQL</p>
+  <p><b>Backend:</b> ASP.NET Core (.NET 10), FastAPI, gRPC, REST, microservices, YARP API gateway, Quartz, SignalR, EF Core, Dapper</p>
+  <p><b>Data:</b> SQL Server, PostgreSQL, Oracle, MySQL, Polars, DuckDB, Parquet, Redis</p>
+  <p><b>Frontend:</b> Angular 22, RxJS, Angular Material</p>
+  <p><b>Security:</b> JWT, SAML 2.0 SSO (Microsoft Entra ID), RBAC, OTP MFA, OWASP Top 10, VAPT remediation</p>
+  <p><b>Quality and delivery:</b> xUnit, pytest, architecture tests, GitHub Actions CI/CD, blue/green deployment, SOLID, design patterns</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <p class="job">ICRA Analytics Ltd., Kolkata, India</p>
+  <p class="sub">Software Engineer (Consultant I) | Sep 2023 – Present</p>
+  <ul id="exp">
+    <li data-item="1">Built a custom report platform that turns a client's own Excel workbook into a versioned, configurable report; migrated 32 client report formats from hand-coded legacy reports to configuration.</li>
+    <li data-item="2">Designed the platform across four services: Angular 22 UI, YARP API gateway, .NET 10 orchestration service (Quartz scheduling, mail outbox, permissions) and a Python engine (FastAPI, Polars, DuckDB over Parquet) connected by gRPC.</li>
+    <li data-item="3">Matched legacy output cell by cell at 98% or better across all migrated reports, with each report generating in under 5 minutes.</li>
+    <li data-item="4">Cut a business-critical batch job from 2 hours to 2 minutes (98% faster) by splitting sequential steps into parallel pipelines with the Task Parallel Library and moving heavy transformations to an in-process Polars engine.</li>
+    <li data-item="5">Drove architecture modernisation and system decoupling, moving legacy desktop tools to independently deployable web services with REST and gRPC contracts.</li>
+    <li data-item="6">Built a data access layer that switches between SQL Server, Oracle, PostgreSQL and MySQL at runtime, with engine-native bulk copy for millions of daily trade records.</li>
+    <li data-item="8">Enabled CI/CD adoption with GitHub Actions pipelines for the .NET API, Angular app and Python modules, replacing manual releases with zero-downtime blue/green deployments.</li>
+    <li data-item="9">Raised unit test coverage to a 90% CI gate backed by 14,900+ automated tests, and added architecture tests that enforce layer boundaries in every .NET service.</li>
+    <li data-item="10">Closed every finding from a VAPT security audit (JWT middleware, email OTP, per-IP rate limiting, hardened headers) and shipped zero-vulnerability releases; moved enterprise clients to SAML 2.0 single sign-on with Microsoft Entra ID.</li>
+    <li data-item="11">Contributed to architecture reviews, cost optimisation and ISO process audits.</li>
+    <li data-item="12">Provided L1 to L3 production support, resolving issues quickly and keeping client operations stable.</li>
+    <li data-item="13">Used AI coding agents with guardrails (planned tasks, test gates, protected-file hooks) to raise delivery speed and code quality.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Selected Projects</h2>
+  <p class="proj">Custom Report Platform <span>| .NET 10, Python, Polars, DuckDB, gRPC, YARP, Angular 22, Quartz, Parquet</span></p>
+  <ul>
+    <li>Built a template engine that detects the tables and headers in a client's own Excel workbook, binds each column to a data point and saves the result as a versioned JSON package.</li>
+    <li>Built a query builder that parses SQL into an intermediate representation, validates it and runs it on DuckDB, with caching that collapses identical concurrent requests.</li>
+  </ul>
+  <p class="proj">Market Surveillance and Portfolio Overlap <span>| .NET, Angular, SignalR, Polars</span></p>
+  <ul>
+    <li>Shipped two licensed products from one repository via compile-time modules: one flags possible market abuse in high-volume tick and trade data, the other measures holdings overlap across portfolios.</li>
+  </ul>
+  <p class="proj">Treasury and Fund Analytics Modernisation <span>| ASP.NET, Web API, Angular, T-SQL</span></p>
+  <ul>
+    <li>Rebuilt legacy treasury desktop tools as web applications and sped up reports through SQL Server indexing and stored-procedure tuning.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <p class="job">B.Tech, Information Technology | 2019 – 2023</p>
+  <p>B. P. Poddar Institute of Management and Technology, Kolkata | CGPA 8.9 / 10</p>
+</section>
+
+<section>
+  <h2>Certification</h2>
+  <p>Generative AI Mastery for Software Development, upGrad and Microsoft, Nov 2025</p>
+</section>
+
+</body>
+</html>

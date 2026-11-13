@@ -2,8 +2,8 @@
 
 Live: **https://herijeet.github.io/AbhijeetGautam/**
 
-Static, hand-built site: `index.html`, `styles.css`, `main.js`. No build step, no frameworks and no web fonts
-(it uses the system font: SF Pro on Apple devices, Segoe UI on Windows, Roboto on Android).
+Static, hand-built site: `index.html`, `styles.css`, `main.js`. No build step and no frameworks. Headings use
+the Newsreader font from Google Fonts; body text uses the system font.
 
 Run it locally:
 
@@ -11,19 +11,34 @@ Run it locally:
 python3 -m http.server 8000
 ```
 
-## What's on the page
+## Page structure
 
-- A light, Apple-style layout with automatic dark mode, which follows the visitor's system setting.
-- A **scroll-driven 3D laptop** built in pure CSS: a front-view laptop whose lid swings open as you scroll, and its screen mirrors the live demo.
-- A working **custom report builder** demo (made-up fund data). Pick columns, filter and sort, then export a CSV that opens in Excel.
-- Case-study tiles with small live visuals: batch-job race chart, portfolio overlap, database switcher, microservices map, upload and CI/CD pipeline.
-- About, experience, education and a "tech specs" skills list.
+1. Hero with role, summary, email and résumé buttons, followed by a four-number stat strip
+2. Featured project: Custom Report Platform (problem, what was built, an inline SVG architecture diagram, result), a scroll-driven 3D laptop, and an interactive report demo with made-up fund data that exports a CSV
+3. Selected work
+4. Engineering practice
+5. About
+6. Experience, education and certification
+7. Skills
+8. Contact
 
-## Responsive and accessible
+Works at phone width with no horizontal scroll and respects `prefers-reduced-motion`. Checked against
+WCAG 2.1 AA with axe-core in light and dark mode.
 
-- Layout breakpoints at 480, 734, 900, 1068 and 1440 px, tested on phone (390 px), tablet (810 px), laptop (1366 px) and monitor (1920 px) with no horizontal scrolling.
-- Mobile menu, 44 px touch targets, safe-area insets for notched phones, and `svh` units so mobile browser bars don't break the pinned section.
-- Every animation respects `prefers-reduced-motion`.
+## Résumé
+
+`resume/resume.html` is the single source for the résumé. `resume/build-resume.js` renders it to a one-page
+A4 PDF with Playwright and fails if the page overflows or a bullet runs past two lines.
+
+```bash
+# public copy, no phone number: the file the website links to
+node resume/build-resume.js --out Abhijeet_Gautam_Resume.pdf
+
+# recruiter copy with phone number: write it OUTSIDE this repo (the repo is published by GitHub Pages)
+node resume/build-resume.js --out ~/Documents/Abhijeet_Gautam_Software_Engineer.pdf --phone "+91 ..."
+```
+
+The phone number is never stored in this repository.
 
 ## Screenshots
 
@@ -32,4 +47,4 @@ python3 -m http.server 8000
 | Desktop | Phone |
 | --- | --- |
 | ![Hero](.github/screenshots/desktop-hero.png) | ![Phone hero](.github/screenshots/phone-hero.png) |
-| ![3D laptop](.github/screenshots/desktop-laptop-3d.png) | ![Report builder](.github/screenshots/phone-report-builder.png) |
+| ![3D laptop](.github/screenshots/desktop-laptop-3d.png) | ![Report demo](.github/screenshots/phone-report-builder.png) |

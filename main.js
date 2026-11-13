@@ -33,7 +33,7 @@
   }
 
   /* ---------- scroll-driven: nav, laptop, hero tilt on touch ---------- */
-  var nav = $('#nav'), show = $('#overview'), links = $$('#navLinks a'),
+  var nav = $('#nav'), show = $('#overview'), links = $$('#navLinks a[href^="#"]'),
       secs = links.map(function (a) { return $(a.getAttribute('href')); }), ticking = false;
 
   function onScroll() {
@@ -119,7 +119,7 @@
   function fire(el) {
     el.classList.add('in');
     $$('[data-count]', el).forEach(countUp);
-    $$('.race,.venn', el).forEach(function (n) { n.classList.add('in'); });
+    $$('.race,.venn,.flow', el).forEach(function (n) { n.classList.add('in'); });
     if (!once.dbs && $('.dbs', el)) { once.dbs = true; startDbs(); }
     if (!once.up && $('.upload', el)) { once.up = true; startUpload(); }
   }

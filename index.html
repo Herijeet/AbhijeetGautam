@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
-<title>Abhijeet Gautam · Software Engineer, .NET Full Stack</title>
-<meta name="description" content="Abhijeet Gautam is a software engineer in Kolkata building capital-markets and mutual fund software in C#, ASP.NET Core 8 and Angular: microservices, market surveillance and self-service Excel reporting.">
+<title>Abhijeet Gautam · Software Engineer: .NET, Python, Angular</title>
+<meta name="description" content="I build data-heavy financial software: report engines, market surveillance and the pipelines under them. 3+ years at ICRA Analytics, shipping to asset-management and capital-markets clients.">
 <link rel="canonical" href="https://herijeet.github.io/AbhijeetGautam/">
 
-<meta property="og:title" content="Abhijeet Gautam · Software Engineer, .NET Full Stack">
-<meta property="og:description" content="3+ years building capital-markets and mutual fund software in C#, ASP.NET Core and Angular.">
-<meta property="og:image" content="https://herijeet.github.io/AbhijeetGautam/abhijeet.jpg">
-<meta property="og:url" content="https://herijeet.github.io/AbhijeetGautam/">
 <meta property="og:type" content="profile">
+<meta property="og:site_name" content="Abhijeet Gautam">
+<meta property="og:title" content="Abhijeet Gautam · Software Engineer: .NET, Python, Angular">
+<meta property="og:description" content="I build data-heavy financial software: report engines, market surveillance and the pipelines under them. 3+ years at ICRA Analytics.">
+<meta property="og:url" content="https://herijeet.github.io/AbhijeetGautam/">
+<meta property="og:image" content="https://herijeet.github.io/AbhijeetGautam/abhijeet.jpg">
+<meta property="og:image:alt" content="Portrait of Abhijeet Gautam">
+<meta property="og:locale" content="en_GB">
+<meta property="profile:first_name" content="Abhijeet">
+<meta property="profile:last_name" content="Gautam">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Abhijeet Gautam · Software Engineer: .NET, Python, Angular">
+<meta name="twitter:description" content="I build data-heavy financial software: report engines, market surveillance and the pipelines under them. 3+ years at ICRA Analytics.">
+<meta name="twitter:image" content="https://herijeet.github.io/AbhijeetGautam/abhijeet.jpg">
+<meta name="twitter:image:alt" content="Portrait of Abhijeet Gautam">
 
 <link rel="icon" href="abhijeet.jpg">
 <link rel="apple-touch-icon" href="abhijeet.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261113b">
+<link rel="stylesheet" href="styles.css?v=20261113c">
 <script>document.documentElement.classList.add('js')</script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Abhijeet Gautam","jobTitle":"Software Engineer, .NET Full Stack Developer",
+{"@context":"https://schema.org","@type":"Person","name":"Abhijeet Gautam","jobTitle":"Software Engineer",
  "url":"https://herijeet.github.io/AbhijeetGautam/","image":"https://herijeet.github.io/AbhijeetGautam/abhijeet.jpg",
  "worksFor":{"@type":"Organization","name":"ICRA Analytics Ltd."},
  "alumniOf":{"@type":"CollegeOrUniversity","name":"B. P. Poddar Institute of Management and Technology"},
  "address":{"@type":"PostalAddress","addressLocality":"Kolkata","addressCountry":"IN"},
- "email":"mailto:gautamabhijeet7@gmail.com","sameAs":["https://linkedin.com/in/abhijeet-gautam-a49782195"],
- "knowsAbout":["C#","ASP.NET Core","Angular","Microservices","SQL Server","PostgreSQL","Oracle","MySQL","Python","Polars","Excel reporting"]}
+ "email":"mailto:gautamabhijeet7@gmail.com",
+ "sameAs":["https://linkedin.com/in/abhijeet-gautam-a49782195","https://github.com/Herijeet"],
+ "knowsAbout":["C#","Python","TypeScript","SQL","ASP.NET Core","FastAPI","gRPC","Angular","Polars","DuckDB","Parquet","SQL Server","PostgreSQL","Oracle","MySQL"]}
 </script>
 </head>
 <body>
@@ -44,12 +54,12 @@
     <a class="brand" href="#top" aria-label="Abhijeet Gautam, back to top">AG<span>.</span></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#featured">Work</a></li>
+        <li><a href="#practice">Practice</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li class="only-menu"><a href="Abhijeet_Gautam_Resume.pdf" download>Résumé (PDF)</a></li>
+        <li class="only-menu"><a href="Abhijeet_Gautam_Resume.pdf?v=20261113" download="Abhijeet_Gautam_Resume.pdf">Résumé (PDF)</a></li>
       </ul>
     </nav>
     <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
@@ -59,23 +69,20 @@
 
 <main id="main">
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
+<!-- ============ 1. HERO + 2. STAT STRIP ============ -->
+<section class="hero" id="top" aria-labelledby="hero-h">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="hero-kicker rv">Engineering with intention</p>
-      <h1 class="hero-name rv">Abhijeet<br>Gautam<span class="pt">.</span></h1>
-      <p class="hero-role rv">Software Engineer / .NET Full Stack Developer</p>
+      <h1 class="hero-name rv" id="hero-h">Abhijeet<br>Gautam<span class="pt">.</span></h1>
+      <p class="hero-role rv">Software Engineer: .NET, Python, Angular</p>
       <p class="hero-sub rv">
-        I build reliable capital-markets and mutual fund software with C#, ASP.NET Core 8 and Angular:
-        market surveillance, fund analytics, and a tool that lets analysts build their own Excel reports.
+        I build data-heavy financial software: report engines, market surveillance and the pipelines under them.
+        3+ years at ICRA Analytics, shipping to asset-management and capital-markets clients.
       </p>
-      <p class="hero-meta rv"><span>ICRA Analytics · Kolkata, India</span><i aria-hidden="true"></i><span>3+ years of experience</span></p>
       <div class="hero-actions rv">
-        <a class="btn" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
-        <a class="btn ghost" href="#work">View selected work <span aria-hidden="true">↓</span></a>
+        <a class="btn" href="mailto:gautamabhijeet7@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+        <a class="btn ghost" href="Abhijeet_Gautam_Resume.pdf?v=20261113" download="Abhijeet_Gautam_Resume.pdf"><span class="hide-s">Download résumé</span><span class="show-s">Résumé</span> (PDF) <span aria-hidden="true">↓</span></a>
       </div>
-      <a class="link hero-cv rv" href="Abhijeet_Gautam_Resume.pdf" download>Download résumé (PDF) <span aria-hidden="true">›</span></a>
     </div>
 
     <figure class="hero-media rv" id="tiltWrap">
@@ -85,19 +92,76 @@
           <img src="abhijeet.jpg" alt="Portrait of Abhijeet Gautam" width="400" height="500" fetchpriority="high">
           <span class="sheen" aria-hidden="true"></span>
         </div>
-        <figcaption class="frame-cap"><span>Open to new roles</span><span>.NET · Angular · SQL</span></figcaption>
+        <figcaption class="frame-cap"><span>Kolkata, India</span><span>.NET · Python · Angular</span></figcaption>
       </div>
     </figure>
+
+    <ul class="stats" aria-label="Highlights">
+      <li><b>98%</b><span>faster: a critical batch job went from 2 hours to 2 minutes</span></li>
+      <li><b>32</b><span>client report formats moved from hand-coded to configuration</span></li>
+      <li><b>14,900+</b><span>automated tests, with a 90% coverage gate in CI</span></li>
+      <li><b>4</b><span>database engines behind one codebase, chosen at runtime</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- ============ 3D LAPTOP (scroll-driven) ============ -->
+<!-- ============ 3. FEATURED PROJECT ============ -->
+<section class="sec" id="featured" aria-labelledby="fp-h">
+  <div class="wrap">
+    <p class="eyebrow rv">02 / Featured project</p>
+    <h2 id="fp-h" class="h2 rv">Custom Report Platform</h2>
+
+    <dl class="facts fp rv">
+      <div><dt>Problem</dt><dd>Every asset-management client gets its own Excel workbook. Each one was hand-coded in a legacy VB.NET desktop application, so a new format meant a developer and a release.</dd></div>
+      <div><dt>What I built</dt><dd>A platform where an author uploads the client's own workbook. The engine detects its tables and headers, binds each column to a data point, and saves the result as a versioned JSON package. Reports then run on demand or on a schedule and are mailed to the client.</dd></div>
+      <div class="fp-how"><dt>How it works</dt><dd>
+        <figure class="flow" aria-labelledby="flow-cap">
+          <svg class="flow-h" viewBox="0 0 1008 190" role="img" aria-labelledby="flow-t1">
+            <title id="flow-t1">Architecture: Angular front end, YARP API gateway, .NET orchestration service, gRPC, Python calculation engine, Parquet.</title>
+            <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="f-head" d="M0 0 10 5 0 10z"/></marker></defs>
+            <path class="f-edge" d="M162 95 H204" marker-end="url(#ah)"/>
+            <path class="f-edge" d="M366 95 H408" marker-end="url(#ah)"/>
+            <path class="f-edge f-rpc" d="M570 95 H638" marker-end="url(#ah)"/>
+            <path class="f-edge" d="M800 95 H842" marker-end="url(#ah)"/>
+            <text class="f-lab" x="604" y="82">gRPC</text>
+            <g class="f-box"><rect x="2" y="40" width="160" height="110" rx="3"/><text class="f-t" x="82" y="88">Angular 22</text><text class="f-s" x="82" y="110">front end</text></g>
+            <g class="f-box"><rect x="206" y="40" width="160" height="110" rx="3"/><text class="f-t" x="286" y="88">YARP</text><text class="f-s" x="286" y="110">API gateway</text></g>
+            <g class="f-box f-key"><rect x="410" y="40" width="160" height="110" rx="3"/><text class="f-t" x="490" y="76">.NET 10</text><text class="f-s" x="490" y="98">orchestration service</text><text class="f-x" x="490" y="124">Quartz · mail outbox</text><text class="f-x" x="490" y="140">permissions</text></g>
+            <g class="f-box f-key"><rect x="640" y="40" width="160" height="110" rx="3"/><text class="f-t" x="720" y="76">Python 3.12</text><text class="f-s" x="720" y="98">calculation engine</text><text class="f-x" x="720" y="124">FastAPI · Polars</text><text class="f-x" x="720" y="140">DuckDB</text></g>
+            <g class="f-box"><rect x="846" y="40" width="160" height="110" rx="3"/><text class="f-t" x="926" y="88">Parquet</text><text class="f-s" x="926" y="110">data</text></g>
+          </svg>
+          <svg class="flow-v" viewBox="0 0 340 650" role="img" aria-labelledby="flow-t2">
+            <title id="flow-t2">Architecture: Angular front end, YARP API gateway, .NET orchestration service, gRPC, Python calculation engine, Parquet.</title>
+            <defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="f-head" d="M0 0 10 5 0 10z"/></marker></defs>
+            <path class="f-edge" d="M170 82 V118" marker-end="url(#ah2)"/>
+            <path class="f-edge" d="M170 202 V238" marker-end="url(#ah2)"/>
+            <path class="f-edge f-rpc" d="M170 342 V378" marker-end="url(#ah2)"/>
+            <path class="f-edge" d="M170 482 V518" marker-end="url(#ah2)"/>
+            <text class="f-lab" x="206" y="366" text-anchor="start">gRPC</text>
+            <g class="f-box"><rect x="20" y="2" width="300" height="80" rx="3"/><text class="f-t" x="170" y="38">Angular 22</text><text class="f-s" x="170" y="60">front end</text></g>
+            <g class="f-box"><rect x="20" y="122" width="300" height="80" rx="3"/><text class="f-t" x="170" y="158">YARP</text><text class="f-s" x="170" y="180">API gateway</text></g>
+            <g class="f-box f-key"><rect x="20" y="242" width="300" height="100" rx="3"/><text class="f-t" x="170" y="276">.NET 10</text><text class="f-s" x="170" y="298">orchestration service</text><text class="f-x" x="170" y="322">Quartz · mail outbox · permissions</text></g>
+            <g class="f-box f-key"><rect x="20" y="382" width="300" height="100" rx="3"/><text class="f-t" x="170" y="416">Python 3.12</text><text class="f-s" x="170" y="438">calculation engine</text><text class="f-x" x="170" y="462">FastAPI · Polars · DuckDB</text></g>
+            <g class="f-box"><rect x="20" y="522" width="300" height="80" rx="3"/><text class="f-t" x="170" y="558">Parquet</text><text class="f-s" x="170" y="580">data</text></g>
+          </svg>
+          <figcaption id="flow-cap" class="sr">Request path through the Custom Report Platform.</figcaption>
+        </figure>
+        <p>Angular 22 front end → YARP API gateway → .NET 10 orchestration service (Quartz scheduling, mail outbox, permissions) → gRPC → Python 3.12 calculation engine (FastAPI, Polars and DuckDB over Parquet).</p>
+        <p>A query builder parses SQL into an intermediate representation, validates it and runs it on DuckDB, with caching that collapses identical concurrent requests.</p>
+      </dd></div>
+      <div><dt>Result</dt><dd>32 client reports migrated. Each generates in under 5 minutes from the UI. Output matches the legacy system cell by cell at 98% or better, with every remaining difference traced to a data cause. New formats are configuration, not code.</dd></div>
+    </dl>
+    <p class="tags rv" aria-label="Technologies"><span>.NET 10</span><span>Python</span><span>Polars</span><span>DuckDB</span><span>gRPC</span><span>YARP</span><span>Angular 22</span><span>Quartz</span><span>Parquet</span></p>
+  </div>
+</section>
+
+<!-- 3D laptop (scroll-driven); its screen mirrors the demo below -->
 <section class="show" id="overview" aria-labelledby="show-h">
   <div class="show-pin">
     <div class="show-head">
-      <p class="eyebrow light">02 / Featured build</p>
-      <h2 id="show-h" class="show-title">Reports, made by the people<br class="br-wide"> who read them.</h2>
-      <p class="show-cap">Scroll to open. The screen mirrors the live demo below.</p>
+      <p class="eyebrow light">Custom Report Platform · demo</p>
+      <h2 id="show-h" class="show-title">New formats are configuration,<br class="br-wide"> not code.</h2>
+      <p class="show-cap">Scroll to open. The screen mirrors the demo below.</p>
     </div>
     <div class="stage" id="stage">
       <div class="mac" id="mac">
@@ -121,26 +185,11 @@
   </div>
 </section>
 
-<!-- ============ REPORT BUILDER ============ -->
+<!-- Interactive demo -->
 <section class="sec builder-sec" id="builder" aria-labelledby="rb-h">
-  <div class="wrap">
-    <div class="split">
-      <div class="split-txt">
-        <p class="eyebrow rv">03 / Custom Report Builder</p>
-        <h2 id="rb-h" class="h2 rv">One tool instead of a ticket for every report.</h2>
-        <p class="body rv">
-          Every analyst wanted a slightly different mutual fund report, and each one used to be a developer ticket.
-          I built a self-service reporting service, part of a microservices backend, where users pick the columns,
-          filters and sort order they need and download a real Excel workbook.
-        </p>
-        <dl class="facts rv">
-          <div><dt>Problem</dt><dd>Each report format meant new code and a release.</dd></div>
-          <div><dt>What I built</dt><dd>A reporting service with user-defined columns, filters and layout, exported to .xlsx.</dd></div>
-          <div><dt>Result</dt><dd>New report requests no longer wait on a developer.</dd></div>
-        </dl>
-        <p class="tags rv"><span>ASP.NET Core</span><span>C#</span><span>Angular</span><span>SQL Server</span><span>Excel generation</span></p>
-      </div>
-
+  <div class="wrap demo">
+    <h2 id="rb-h" class="sr">Interactive report demo</h2>
+    <p class="body demo-intro rv">A simplified illustration with made-up funds: choose the columns, filter and sort, then export.</p>
       <div class="rb card rv" id="rb">
         <div class="rb-top"><span>Try it</span><small>Made-up funds, for illustration</small></div>
         <p class="rb-lab">Columns</p>
@@ -165,42 +214,27 @@
           <button class="btn sm" id="xbtn" type="button"><span id="xlabel">Export to Excel</span></button>
         </div>
       </div>
-    </div>
   </div>
 </section>
 
-<!-- ============ HIGHLIGHTS ============ -->
-<section class="sec tint" aria-labelledby="hl-h">
+<!-- ============ 4. SELECTED WORK ============ -->
+<section class="sec tint" id="work" aria-labelledby="work-h">
   <div class="wrap">
-    <p class="eyebrow rv">04 / Highlights</p>
-    <h2 id="hl-h" class="h2 rv">Numbers from production, not side projects.</h2>
-    <div class="nums">
-      <div class="num card rv"><p class="big"><span data-count="98">98</span>%</p><p>faster: a business-critical batch job went from <b>2 hours to 2 minutes</b>.</p></div>
-      <div class="num card rv"><p class="big"><span data-count="4">4</span></p><p>database engines behind <b>one codebase</b>, chosen at runtime per client.</p></div>
-      <div class="num card rv"><p class="big">M<small>/day</small></p><p><b>Millions of trade records</b> loaded daily through native bulk copy and Parquet staging.</p></div>
-      <div class="num card rv"><p class="big"><span data-count="34">34</span></p><p><b>Angular standalone components</b> built end to end with their ASP.NET Core APIs.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WORK ============ -->
-<section class="sec" id="work" aria-labelledby="work-h">
-  <div class="wrap">
-    <p class="eyebrow rv">05 / Selected work</p>
-    <h2 id="work-h" class="h2 rv">Large data. Demanding users. No room for slow.</h2>
+    <p class="eyebrow rv">03 / Selected work</p>
+    <h2 id="work-h" class="h2 rv">Selected work</h2>
 
     <div class="tiles">
 
       <article class="tile card wide rv" data-tilt>
         <div class="tile-txt">
-          <p class="tile-k">Performance · ASP.NET Core (.NET 8)</p>
+          <p class="tile-k">Performance · .NET 10</p>
           <h3>2 hours → 2 minutes.</h3>
           <p>
-            A business-critical batch job ran its steps one after another. I split it into parallel
-            pipelines with the Task Parallel Library and moved the heavy transformations into an
-            in-process Python (Polars) engine.
+            Cut a business-critical batch job from 2 hours to 2 minutes (98% faster) by splitting sequential steps
+            into parallel pipelines with the Task Parallel Library and moving heavy transformations to an in-process
+            Polars engine.
           </p>
-          <p class="tags"><span>TPL</span><span>async/await</span><span>Python · Polars</span><span>Parquet</span></p>
+          <p class="tags"><span>Task Parallel Library</span><span>Polars</span></p>
         </div>
         <div class="race" id="race" aria-hidden="true">
           <div class="lane"><span class="lane-l">Before</span><div class="track"><i class="slow"></i></div><span class="lane-t">2 h</span></div>
@@ -213,15 +247,15 @@
       </article>
 
       <article class="tile card rv" data-tilt>
-        <p class="tile-k">ICRA Analytics · Market surveillance</p>
-        <h3>POMA &amp; Portfolio Overlap</h3>
+        <p class="tile-k">ICRA Analytics</p>
+        <h3>Market Surveillance and Portfolio Overlap</h3>
         <div class="venn" aria-hidden="true"><i></i><i></i><b>overlap</b></div>
         <p>
-          Flags possible market abuse in high-volume tick and trade data, with a companion tool that measures
-          how much holdings overlap across portfolios. Two separately licensed products ship from one repository,
-          with modules switched on or off at compile time.
+          Flags possible market abuse in high-volume tick and trade data, with a companion tool measuring holdings
+          overlap across portfolios. Two licensed products ship from one repository via compile-time modules.
+          Long-running imports report live progress over SignalR.
         </p>
-        <p class="tags"><span>.NET 8</span><span>Angular</span><span>SignalR</span><span>Polars</span></p>
+        <p class="tags"><span>.NET</span><span>Angular</span><span>SignalR</span><span>Polars</span></p>
       </article>
 
       <article class="tile card rv" data-tilt>
@@ -229,188 +263,162 @@
         <h3>One codebase, four databases.</h3>
         <div class="dbs" aria-hidden="true"><span>SQL Server</span><span>Oracle</span><span>PostgreSQL</span><span>MySQL</span></div>
         <p>
-          A data access layer that switches between engines at runtime, so every client deploys on the database it
-          already runs. Ingestion uses each engine's native path: SqlBulkCopy, PostgreSQL binary COPY and MySqlBulkCopy.
+          Built a data access layer that switches between SQL Server, Oracle, PostgreSQL and MySQL at runtime,
+          with engine-native bulk copy for millions of daily trade records.
         </p>
-        <p class="tags"><span>Dapper</span><span>EF Core</span><span>Bulk copy</span><span>Parquet</span></p>
       </article>
 
-      <article class="tile card wide rv" data-tilt>
-        <div class="tile-txt">
-          <p class="tile-k">Architecture</p>
-          <h3>Microservices on ASP.NET Core.</h3>
-          <p>
-            Each service owns one job, such as authentication, ingestion, reports or notifications, and exposes REST APIs.
-            One part can change, deploy and scale without redeploying the rest.
-          </p>
-          <p class="tags"><span>REST APIs</span><span>Worker services</span><span>JWT</span><span>Redis</span></p>
-        </div>
-        <div class="arch" aria-hidden="true">
-          <svg viewBox="0 0 520 230">
-            <path id="e1" class="edge" d="M232 115 C260 115 260 37 288 37"/>
-            <path id="e2" class="edge" d="M232 115 C260 115 260 92 288 92"/>
-            <path id="e3" class="edge" d="M232 115 C260 115 260 147 288 147"/>
-            <path id="e4" class="edge" d="M232 115 C260 115 260 202 288 202"/>
-            <path class="edge" d="M92 115 H128"/>
-            <path class="edge" d="M402 37 C424 37 424 115 440 115"/>
-            <path class="edge" d="M402 92 C424 92 424 115 440 115"/>
-            <path class="edge" d="M402 147 C424 147 424 115 440 115"/>
-            <path class="edge" d="M402 202 C424 202 424 115 440 115"/>
-            <g class="node"><rect x="10" y="95" width="82" height="40" rx="10"/><text x="51" y="119">Angular</text></g>
-            <g class="node gw"><rect x="128" y="91" width="104" height="48" rx="12"/><text x="180" y="111">API gateway</text><text class="sub" x="180" y="127">JWT · rate limit</text></g>
-            <g class="node"><rect x="288" y="20" width="114" height="34" rx="9"/><text x="345" y="41">Auth · SSO</text></g>
-            <g class="node"><rect x="288" y="75" width="114" height="34" rx="9"/><text x="345" y="96">Ingestion</text></g>
-            <g class="node"><rect x="288" y="130" width="114" height="34" rx="9"/><text x="345" y="151">Reports</text></g>
-            <g class="node"><rect x="288" y="185" width="114" height="34" rx="9"/><text x="345" y="206">Notifications</text></g>
-            <g class="node gw"><rect x="440" y="88" width="72" height="54" rx="12"/><text x="476" y="110">Data</text><text class="sub" x="476" y="126">SQL · cache</text></g>
-            <circle class="pulse" r="3.5"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#e1"/></animateMotion></circle>
-            <circle class="pulse" r="3.5"><animateMotion dur="2.8s" begin="-.9s" repeatCount="indefinite"><mpath href="#e3"/></animateMotion></circle>
-            <circle class="pulse" r="3.5"><animateMotion dur="3.1s" begin="-1.7s" repeatCount="indefinite"><mpath href="#e2"/></animateMotion></circle>
-            <circle class="pulse" r="3.5"><animateMotion dur="3.4s" begin="-.4s" repeatCount="indefinite"><mpath href="#e4"/></animateMotion></circle>
-          </svg>
-        </div>
+      <article class="tile card rv" data-tilt>
+        <p class="tile-k">Architecture</p>
+        <h3>Modernisation and decoupling.</h3>
+        <p>
+          Drove architecture modernisation and system decoupling, moving legacy desktop tools to independently
+          deployable web services with REST and gRPC contracts.
+        </p>
+        <p class="tags"><span>REST</span><span>gRPC</span><span>Microservices</span></p>
       </article>
 
       <article class="tile card rv" data-tilt>
         <p class="tile-k">Security &amp; identity</p>
         <h3>Passed the audit.</h3>
         <p>
-          Closed every finding from a VAPT security audit: JWT authentication middleware, email OTP as a second
-          login factor, per-IP rate limiting and hardened headers (CSP, HSTS, X-Frame-Options). Moved enterprise
-          clients to SAML 2.0 single sign-on with Microsoft Entra ID.
+          Closed every finding from a VAPT security audit (JWT middleware, email OTP, per-IP rate limiting, hardened
+          headers) and shipped zero-vulnerability releases; moved enterprise clients to SAML 2.0 single sign-on with
+          Microsoft Entra ID.
         </p>
         <p class="tags"><span>JWT</span><span>SAML 2.0</span><span>Entra ID</span><span>OWASP Top 10</span></p>
       </article>
 
       <article class="tile card rv" data-tilt>
-        <p class="tile-k">ICRA Analytics · Modernisation</p>
-        <h3>Treasury Solutions &amp; MFI Explorer</h3>
+        <p class="tile-k">Delivery</p>
+        <h3>Releases without downtime.</h3>
         <p>
-          Rebuilt legacy treasury desktop tools as web applications with RESTful APIs and Angular reporting modules.
-          Reports got faster through SQL Server indexing and stored-procedure tuning, not more hardware.
+          Enabled CI/CD adoption with GitHub Actions pipelines for the .NET API, Angular app and Python modules,
+          replacing manual releases with zero-downtime blue/green deployments.
         </p>
-        <p class="tags"><span>ASP.NET MVC</span><span>Web API</span><span>Angular</span><span>T-SQL</span></p>
-      </article>
-
-      <article class="tile card wide rv" data-tilt>
-        <div class="tile-txt">
-          <p class="tile-k">Delivery</p>
-          <h3>Live progress, automatic releases.</h3>
-          <p>
-            Long-running imports now report progress live over SignalR; users used to refresh the page to check.
-            GitHub Actions pipelines build and deploy the .NET API, the Angular app and Cython-compiled Python modules
-            to IIS and a Windows service, replacing manual releases.
-          </p>
-          <p class="tags"><span>SignalR</span><span>GitHub Actions</span><span>IIS</span><span>Cython</span></p>
-        </div>
         <div class="upload" aria-hidden="true">
-          <div class="up-row"><span>trades_2026_11.parquet</span><b class="up-pct" id="upPct">0%</b></div>
+          <div class="up-row"><span>blue → green</span><b class="up-pct" id="upPct">0%</b></div>
           <div class="up-bar"><i id="upBar"></i></div>
           <ol class="pipe">
             <li>Build</li><li>Test</li><li>Package</li><li>Deploy</li>
           </ol>
         </div>
+        <p class="tags"><span>GitHub Actions</span><span>Blue/green</span></p>
+      </article>
+
+      <article class="tile card rv" data-tilt>
+        <p class="tile-k">ICRA Analytics</p>
+        <h3>Treasury and Fund Analytics Modernisation</h3>
+        <p>
+          Rebuilt legacy treasury desktop tools as web applications and sped up reports through SQL Server indexing
+          and stored-procedure tuning.
+        </p>
+        <p class="tags"><span>ASP.NET</span><span>Web API</span><span>Angular</span><span>T-SQL</span></p>
       </article>
 
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="sec tint" aria-labelledby="about-h">
+<!-- ============ 5. ENGINEERING PRACTICE ============ -->
+<section class="sec" id="practice" aria-labelledby="pr-h">
+  <div class="wrap">
+    <p class="eyebrow rv">04 / Engineering practice</p>
+    <h2 id="pr-h" class="h2 rv">Engineering practice</h2>
+    <ul class="practice">
+      <li class="rv"><h3>Tested</h3><p>14,900+ automated tests; CI fails below 90% coverage; architecture tests enforce layer boundaries in every .NET service.</p></li>
+      <li class="rv"><h3>Released safely</h3><p>Blue/green deployments with GitHub Actions, no downtime, zero-vulnerability releases.</p></li>
+      <li class="rv"><h3>Verified against production</h3><p>A parity harness compares every generated workbook with the legacy output before a report goes live.</p></li>
+      <li class="rv"><h3>Reviewed</h3><p>Regular contributor to architecture reviews and cost optimisation.</p></li>
+      <li class="rv"><h3>AI-assisted, with guardrails</h3><p>I plan the work, delegate bounded tasks to coding agents, and gate every change with tests and protected-file hooks.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 6. ABOUT ============ -->
+<section class="sec tint" id="about" aria-labelledby="about-h">
   <div class="wrap about">
     <div>
-      <p class="eyebrow rv">06 / About</p>
-      <h2 id="about-h" class="h2 rv">I like the unglamorous part: making it fast and keeping it working.</h2>
+      <p class="eyebrow rv">05 / About</p>
+      <h2 id="about-h" class="h2 rv">About</h2>
     </div>
     <div class="about-txt">
       <p class="body rv">
-        I studied Information Technology in Kolkata and joined ICRA Analytics in 2023. Most of my work sits between
-        a SQL database and an analyst's screen: APIs in C# and ASP.NET Core, front ends in Angular, and the data
-        plumbing that keeps millions of rows moving every day.
+        I joined ICRA Analytics in 2023 after a B.Tech in Information Technology (8.9 CGPA). Most of my work sits
+        between a large dataset and the person who needs an answer from it: APIs in C#, calculation engines in
+        Python, front ends in Angular. I like the unglamorous part: measuring first, fixing the real bottleneck,
+        and leaving tests behind.
       </p>
-      <ul class="ways">
-        <li class="rv"><h3>Measure first</h3><p>Profile, find the real bottleneck, then fix that. The 2-hour job didn't need a bigger server.</p></li>
-        <li class="rv"><h3>Make it self-serve</h3><p>If people keep asking for the same kind of change, give them a tool to make it themselves.</p></li>
-        <li class="rv"><h3>Secure by default</h3><p>Auth, rate limits and headers go in early, not after the audit report arrives.</p></li>
-      </ul>
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
+<!-- ============ 7. EXPERIENCE ============ -->
 <section class="sec" id="experience" aria-labelledby="exp-h">
   <div class="wrap">
-    <p class="eyebrow rv">07 / Experience</p>
-    <h2 id="exp-h" class="h2 rv">Where the work happened.</h2>
+    <p class="eyebrow rv">06 / Experience</p>
+    <h2 id="exp-h" class="h2 rv">Experience</h2>
 
     <div class="job card rv">
       <div class="job-head">
         <div class="job-logo" aria-hidden="true">ICRA</div>
         <div>
-          <h3>Consultant I</h3>
-          <p>ICRA Analytics Ltd. · Kolkata, India</p>
+          <h3>Software Engineer (Consultant I)</h3>
+          <p>ICRA Analytics Ltd., Kolkata, India</p>
         </div>
         <p class="job-date">Sep 2023 – Present</p>
       </div>
-      <ol class="tl" id="tl">
-        <li><h4>Batch job: 2 hours to 2 minutes</h4><p>Split sequential steps into parallel pipelines in .NET 8 and moved heavy transformations to an in-process Python (Polars) engine.</p></li>
-        <li><h4>Self-service Excel reporting</h4><p>Built a custom reporting service on mutual fund data, part of a microservices backend. Users set up and generate the report they need themselves.</p></li>
-        <li><h4>One data layer, four databases</h4><p>Runtime-switchable access across SQL Server, Oracle, PostgreSQL and MySQL, with engine-native bulk copy for millions of daily trade records.</p></li>
-        <li><h4>Security and SSO</h4><p>Closed VAPT findings with JWT, email OTP, per-IP rate limiting and hardened headers; moved enterprise clients to SAML 2.0 SSO with Entra ID.</p></li>
-        <li><h4>Full stack features</h4><p>34 Angular standalone components and their Web APIs, including live upload progress over SignalR.</p></li>
-        <li><h4>CI/CD</h4><p>GitHub Actions pipelines deploying the API, Angular app and Cython-compiled Python modules to IIS and a Windows service.</p></li>
-      </ol>
+      <ul class="tl tl-1">
+        <li><p>Built a custom report platform that turns a client's own Excel workbook into a versioned, configurable report; migrated 32 client report formats from hand-coded legacy reports to configuration.</p></li>
+        <li><p>Cut a business-critical batch job from 2 hours to 2 minutes (98% faster) by splitting sequential steps into parallel pipelines with the Task Parallel Library and moving heavy transformations to an in-process Polars engine.</p></li>
+        <li><p>Drove architecture modernisation and system decoupling, moving legacy desktop tools to independently deployable web services with REST and gRPC contracts.</p></li>
+      </ul>
     </div>
 
-    <div class="edu">
+    <div class="edu edu-1">
       <div class="card rv">
         <p class="tile-k">Education · 2019 – 2023</p>
         <h3>B.Tech, Information Technology</h3>
         <p>B. P. Poddar Institute of Management and Technology, Kolkata</p>
         <p class="grade"><b>8.9</b> / 10 CGPA</p>
       </div>
-      <div class="card rv">
-        <p class="tile-k">Certification · Nov 2025</p>
-        <h3>Generative AI Mastery for Software Development</h3>
-        <p>upGrad &amp; Microsoft</p>
-      </div>
     </div>
+    <p class="cert rv">Certification: Generative AI Mastery for Software Development, upGrad and Microsoft, Nov 2025</p>
   </div>
 </section>
 
-<!-- ============ SKILLS (tech specs) ============ -->
+<!-- ============ 8. SKILLS ============ -->
 <section class="sec tint" id="skills" aria-labelledby="sk-h">
   <div class="wrap">
-    <p class="eyebrow rv">08 / Skills</p>
-    <h2 id="sk-h" class="h2 rv">Tech specs.</h2>
+    <p class="eyebrow rv">07 / Skills</p>
+    <h2 id="sk-h" class="h2 rv">Skills</h2>
     <dl class="specs">
-      <div class="rv"><dt>Languages</dt><dd>C#, Python, SQL, TypeScript, JavaScript</dd></div>
-      <div class="rv"><dt>Backend</dt><dd>ASP.NET Core (.NET 8), ASP.NET MVC, RESTful Web APIs, Microservices, Entity Framework Core, Dapper, LINQ, SignalR, Background worker services</dd></div>
-      <div class="rv"><dt>Frontend</dt><dd>Angular (standalone components), RxJS, Angular Material, Bootstrap 5, HTML5, CSS3</dd></div>
-      <div class="rv"><dt>Data</dt><dd>SQL Server, Oracle, PostgreSQL, MySQL, T-SQL, stored procedures, query optimisation, Python (Polars), Apache Parquet, Redis, Excel report generation</dd></div>
-      <div class="rv"><dt>Performance</dt><dd>Multithreading, Task Parallel Library, async/await, caching, bulk ingestion</dd></div>
-      <div class="rv"><dt>Security</dt><dd>JWT, SAML 2.0 SSO, Microsoft Entra ID, RBAC, OTP multi-factor auth, OWASP Top 10, VAPT remediation</dd></div>
-      <div class="rv"><dt>Practice</dt><dd>SOLID, design patterns, dependency injection, system design, xUnit, Moq, Git, GitHub Actions, CI/CD, IIS, Agile/Scrum</dd></div>
+      <div class="rv"><dt>Languages</dt><dd>C#, Python, TypeScript, SQL</dd></div>
+      <div class="rv"><dt>Backend</dt><dd>ASP.NET Core (.NET 10), FastAPI, gRPC, REST, microservices, YARP API gateway, Quartz, SignalR, EF Core, Dapper</dd></div>
+      <div class="rv"><dt>Data</dt><dd>SQL Server, PostgreSQL, Oracle, MySQL, Polars, DuckDB, Parquet, Redis</dd></div>
+      <div class="rv"><dt>Frontend</dt><dd>Angular 22, RxJS, Angular Material</dd></div>
+      <div class="rv"><dt>Security</dt><dd>JWT, SAML 2.0 SSO (Microsoft Entra ID), RBAC, OTP MFA, OWASP Top 10, VAPT remediation</dd></div>
+      <div class="rv"><dt>Quality and delivery</dt><dd>xUnit, pytest, architecture tests, GitHub Actions CI/CD, blue/green deployment, SOLID, design patterns</dd></div>
     </dl>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- ============ 9. CONTACT ============ -->
 <section class="contact" id="contact" aria-labelledby="ct-h">
   <div class="wrap">
     <img class="ct-face rv" src="abhijeet.jpg" alt="" width="88" height="88" loading="lazy">
-    <p class="eyebrow rv">09 / Contact</p>
-    <h2 id="ct-h" class="ct-title rv">Have a hard .NET problem? <em>Let's talk.</em></h2>
-    <p class="body rv">I'm open to .NET and full stack roles. Email is the fastest way to reach me.</p>
+    <p class="eyebrow rv">08 / Contact</p>
+    <h2 id="ct-h" class="ct-title rv">Contact</h2>
+    <p class="body rv">Open to backend and full stack engineering roles. Email is the fastest way to reach me.</p>
     <div class="ct-actions rv">
-      <a class="btn lg" href="mailto:gautamabhijeet7@gmail.com">Email me</a>
+      <a class="btn lg" href="mailto:gautamabhijeet7@gmail.com">gautamabhijeet7@gmail.com</a>
       <button class="btn lg ghost" type="button" id="copyMail">Copy address</button>
     </div>
     <p class="copy-ok" id="copyOk" role="status" aria-live="polite"></p>
     <ul class="ct-links rv">
-      <li><a href="https://linkedin.com/in/abhijeet-gautam-a49782195" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a></li>
-      <li><a href="Abhijeet_Gautam_Resume.pdf" download>Résumé (PDF)</a></li>
+      <li><a href="https://linkedin.com/in/abhijeet-gautam-a49782195" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="sr"> (opens in a new tab)</span></a></li>
+      <li><a href="https://github.com/Herijeet" rel="noopener" target="_blank">GitHub <span aria-hidden="true">↗</span><span class="sr"> (opens in a new tab)</span></a></li>
+      <li><a href="Abhijeet_Gautam_Resume.pdf?v=20261113" download="Abhijeet_Gautam_Resume.pdf">Résumé (PDF)</a></li>
     </ul>
   </div>
 </section>
@@ -424,6 +432,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=20261113b" defer></script>
+<script src="main.js?v=20261113c" defer></script>
 </body>
 </html>

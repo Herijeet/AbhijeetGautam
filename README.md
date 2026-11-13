@@ -14,7 +14,7 @@ python3 -m http.server 8000
 ## What's on the page
 
 - A light, Apple-style layout with automatic dark mode, which follows the visitor's system setting.
-- A **scroll-driven 3D laptop** built in pure CSS: the lid opens as you scroll, and its screen mirrors the live demo.
+- A **scroll-driven 3D laptop** built in pure CSS: a front-view laptop whose lid swings open as you scroll, and its screen mirrors the live demo.
 - A working **custom report builder** demo (made-up fund data). Pick columns, filter and sort, then export a CSV that opens in Excel.
 - Case-study tiles with small live visuals: batch-job race chart, portfolio overlap, database switcher, microservices map, upload and CI/CD pipeline.
 - About, experience, education and a "tech specs" skills list.
